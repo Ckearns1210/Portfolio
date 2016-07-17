@@ -328,6 +328,28 @@ h2 {
     }
 }
 @media only screen and (max-width: 720px) {
+
+  .site-container {
+    position: initial;
+  }
+
+  body .on {
+    overflow: scroll;
+  }
+  aside {
+    height: initial;
+    position: absolute;
+
+  }
+
+  .aside.on {
+    height: initial;
+    top: initial;
+  }
+
+  #projects-button {
+    position: absolute;
+  }
   .hidden-desktop {
     display: none;
   }
@@ -352,28 +374,31 @@ h2 {
     p {
         line-height: 1.5;
     }
-    body.on {
-        overflow-y: hidden;
-    }
+
     aside.on {
         flex-direction: column;
         justify-content: space-around;
         margin: auto;
-        top: 6vh;
+        top: 12vh;
         height: 103vh;
     }
     section {
-        overflow: hidden;
+        overflow: scroll;
     }
     .aside {
         flex-direction: column;
         justify-content: space-around;
         margin: auto;
-        top: 17vh;
-        height: 58vh;
+        top: 49vh;
+        height: inital;
+        margin-top: initial;
     }
     .sub-title {
       font-size: 14px;
       font-style: italic;
+    }
+
+    section.on {
+      display: none;
     }
 }
