@@ -334,7 +334,7 @@ h2 {
   }
 
   body .on {
-    overflow: scroll;
+    overflow: initial;
   }
   aside {
     height: initial;
