@@ -1,370 +1,379 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
-
-
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 @font-face {
-  font-family: 'fugueregular';
-  src: url('./fonts/fugue-webfont.eot');
-  src: url('./fonts/fugue-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/fugue-webfont.woff2') format('woff2'), url('./fonts/fugue-webfont.woff') format('woff'), url('./fonts/fugue-webfont.ttf') format('truetype'), url('./fonts/fugue-webfont.svg#fugueregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'fugueregular';
+    src: url('./fonts/fugue-webfont.eot');
+    src: url('./fonts/fugue-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/fugue-webfont.woff2') format('woff2'), url('./fonts/fugue-webfont.woff') format('woff'), url('./fonts/fugue-webfont.ttf') format('truetype'), url('./fonts/fugue-webfont.svg#fugueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-
-
-
-
 body {
-  font-family: 'fugueregular', sans-serif;
-  font-weight: 200;
-  color: white;
-  letter-spacing: 1px;
-  font-size: inherit;
-  background: #7F7F7F;
-  perspective: 600px;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    color: white;
+    letter-spacing: 1px;
+    font-size: inherit;
+    background: #7F7F7F;
+    perspective: 600px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
 }
-
+.hidden-desktop {
+    display: block;
+}
+.hidden-mobile {
+    display: none;
+}
 .site-container {
-  position: relative;
-  margin: none;
-  padding: none;
+    position: relative;
+    margin: none;
+    padding: none;
 }
-
 body .on {
-  overflow: hidden;
+    overflow: hidden;
 }
 
-
+.sub-title {
+  font-size: 14px;
+  font-style: italic;
+}
 #name {
-  font-size: 20px;
+    font-size: 1.2em;
 }
-
 #projects-button {
-  font-family: 'Anonymous Pro', sans-serif;
-  z-index: 100;
+    font-family: 'Source Code Pro', sans-serif;
+    z-index: 100;
 }
-
 p, a {
-  font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Source Code Pro', sans-serif;
 }
 .project {
-  flex: 1;
-  text-align: center;
+    flex: 1;
+    text-align: center;
+    display: -moz-flex;
 }
-
 .project-title {
-  font-size: 1.6em;
-  line-height: 1;
+    font-size: 1.2em;
+    line-height: 1;
+    font-family: 'Lato', sans-serif;
 }
-
 aside {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 90;
-  position: fixed;
-  width: 90vw;
-  height: 70vh;
-  top: 0;
-  left: 50%;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  transform-origin: 50% 0;
-  transform: translateX(-50%) scale(0);
+    z-index: 90;
+    position: fixed;
+    width: 90vw;
+    height: 70vh;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform-origin: 50% 0;
+    transform: translateX(-50%) scale(0);
 }
 aside.on {
-  top: 5vh;
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
-  transform: translateX(-50%) scale(1);
+    top: 5vh;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%) scale(1);
 }
 a {
-  text-decoration: none;
-  display: block;
-  line-height: 35px;
-  color: white;
+    text-decoration: none;
+    display: block;
+    line-height: 35px;
+    color: white;
 }
 section {
-  width: 60vw;
-  position: relative;
-  height: 80vh;
-  padding: 10vh 20vw;
-  background: #0B0B0B;
-  transition: all 0.3s ease-in-out;
+    width: 60vw;
+    position: relative;
+    height: 80vh;
+    padding: 10vh 20vw;
+    background: #0B0B0B;
+    transition: all 0.3s ease-in-out;
 }
-
 section.on {
-  box-shadow: 0 5px 20px #333333;
-  cursor: zoom-out;
-  transition: all .3s ease-in-out;
-  transform-origin: 50% 0;
-  transform: scale(.8) translateY(83vh);
+    box-shadow: 0 5px 20px #333333;
+    cursor: zoom-out;
+    transition: all .3s ease-in-out;
+    transform-origin: 50% 0;
+    transform: scale(.8) translateY(83vh);
 }
-
 .contact {
-  position: fixed;
-  top: 30vh;
-  left: 8vw;
+    position: fixed;
+    top: 30vh;
+    left: 8vw;
 }
-
 h2 {
-  font-size: 1em;
+    font-size: 1em;
 }
-
 #projects-button {
-  color: white;
-  z-index: 100;
-  position: fixed;
-  width: 110px;
-  height: 40px;
-  top: 40px;
-  right: 100px;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-size: 20px;
+    color: white;
+    z-index: 100;
+    position: fixed;
+    width: 110px;
+    height: 50px;
+    top: 40px;
+    right: 100px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 20px;
+}
+.aside {
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.glitch_word_box {
+.center {
+  max-width: 70%;
+}
+
+/*.glitch_word_box {
   -webkit-animation: disappear 1s linear;
   -webkit-animation-iteration-count: infinite, infinite;
   -moz-animation: disappear 1s linear;
   -moz-animation-iteration-count: infinite, infinite;
   -o-animation: disappear 1s linear;
   -o-animation-iteration-count: infinite, infinite;
-}
+}*/
 
 .glitch_word_box .glitch_word0 {
-  position: absolute;
-  width: 100%;
+    position: absolute;
+    width: 100%;
 }
 .glitch_word_box .glitch_word1 {
-  display: none;
-  color: red;
-  font-weight: bolder;
-  left: -2px;
-  position: absolute;
-  top: -2px;
-  width: 100%;
-  z-index: -1;
-  -webkit-animation: animate_glitch_1 .2s linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation: animate_glitch_1 .2s linear;
-  -moz-animation-iteration-count: infinite;
-  -o-animation: animate_glitch_1 .2s linear;
-  -o-animation-iteration-count: infinite;
+    display: none;
+    color: red;
+    font-weight: bolder;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    width: 100%;
+    z-index: -1;
+    -webkit-animation: animate_glitch_1 .2s linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: animate_glitch_1 .2s linear;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: animate_glitch_1 .2s linear;
+    -o-animation-iteration-count: infinite;
 }
 .glitch_word_box .glitch_word2 {
-  display: none;
-  color: blue;
-  font-weight: bolder;
-  left: 2px;
-  position: absolute;
-  top: 2px;
-  width: 100%;
-  z-index: -1;
-  -webkit-animation: animate_glitch_2 .3s linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation: animate_glitch_2 .3s linear;
-  -moz-animation-iteration-count: infinite;
-  -o-animation: animate_glitch_2 .3s linear;
-  -o-animation-iteration-count: infinite;
+    display: none;
+    color: blue;
+    font-weight: bolder;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    z-index: -1;
+    -webkit-animation: animate_glitch_2 .3s linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: animate_glitch_2 .3s linear;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: animate_glitch_2 .3s linear;
+    -o-animation-iteration-count: infinite;
 }
-
-.glitch_word_box.hover .glitch_word1{
-  display: block;
+.glitch_word_box.hover .glitch_word1 {
+    display: block;
 }
-
-.glitch_word_box.hover .glitch_word2{
-  display: block;
+.glitch_word_box.hover .glitch_word2 {
+    display: block;
 }
 @-webkit-keyframes disappear {
-  0% {
-    opacity: 0;
-  }
-  2% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 1;
+    }
 }
-
-
 @-webkit-keyframes animate_glitch_1 {
-  0% {
-    top: 1px;
-    left: 1px;
-  }
-  25% {
-    top: 3px;
-    left: 2px;
-  }
-  50% {
-    top: -1px;
-    left: -4px;
-  }
-  75% {
-    top: 2px;
-    left: 5px;
-  }
-  100% {
-    top: 1px;
-    left: -2px;
-  }
+    0% {
+        top: 1px;
+        left: 1px;
+    }
+    25% {
+        top: 3px;
+        left: 2px;
+    }
+    50% {
+        top: -1px;
+        left: -4px;
+    }
+    75% {
+        top: 2px;
+        left: 5px;
+    }
+    100% {
+        top: 1px;
+        left: -2px;
+    }
 }
 @-webkit-keyframes animate_glitch_2 {
-  0% {
-    top: -1px;
-    left: -1px;
-  }
-  25% {
-    top: -3px;
-    left: -2px;
-  }
-  50% {
-    top: 1px;
-    left: 4px;
-  }
-  100% {
-    top: -1px;
-    left: -1px;
-  }
+    0% {
+        top: -1px;
+        left: -1px;
+    }
+    25% {
+        top: -3px;
+        left: -2px;
+    }
+    50% {
+        top: 1px;
+        left: 4px;
+    }
+    100% {
+        top: -1px;
+        left: -1px;
+    }
 }
 @-moz-keyframes disappear {
-  0% {
-    opacity: 0;
-  }
-  2% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 1;
+    }
 }
 @-moz-keyframes animate_glitch_1 {
-  0% {
-    top: 1px;
-    left: 1px;
-  }
-  25% {
-    top: 3px;
-    left: 2px;
-  }
-  50% {
-    top: -1px;
-    left: -4px;
-  }
-  75% {
-    top: 2px;
-    left: 5px;
-  }
-  100% {
-    top: 1px;
-    left: -2px;
-  }
+    0% {
+        top: 1px;
+        left: 1px;
+    }
+    25% {
+        top: 3px;
+        left: 2px;
+    }
+    50% {
+        top: -1px;
+        left: -4px;
+    }
+    75% {
+        top: 2px;
+        left: 5px;
+    }
+    100% {
+        top: 1px;
+        left: -2px;
+    }
 }
 @-moz-keyframes animate_glitch_2 {
-  0% {
-    top: -1px;
-    left: -1px;
-  }
-  25% {
-    top: -3px;
-    left: -2px;
-  }
-  50% {
-    top: 1px;
-    left: 4px;
-  }
-  100% {
-    top: -1px;
-    left: -1px;
-  }
+    0% {
+        top: -1px;
+        left: -1px;
+    }
+    25% {
+        top: -3px;
+        left: -2px;
+    }
+    50% {
+        top: 1px;
+        left: 4px;
+    }
+    100% {
+        top: -1px;
+        left: -1px;
+    }
 }
 @-o-keyframes disappear {
-  0% {
-    opacity: 0;
-  }
-  2% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 1;
+    }
 }
 @-o-keyframes animate_glitch_1 {
-  0% {
-    top: 1px;
-    left: 1px;
-  }
-  25% {
-    top: 3px;
-    left: 2px;
-  }
-  50% {
-    top: -1px;
-    left: -4px;
-  }
-  75% {
-    top: 2px;
-    left: 5px;
-  }
-  100% {
-    top: 1px;
-    left: -2px;
-  }
+    0% {
+        top: 1px;
+        left: 1px;
+    }
+    25% {
+        top: 3px;
+        left: 2px;
+    }
+    50% {
+        top: -1px;
+        left: -4px;
+    }
+    75% {
+        top: 2px;
+        left: 5px;
+    }
+    100% {
+        top: 1px;
+        left: -2px;
+    }
 }
 @-o-keyframes animate_glitch_2 {
-  0% {
-    top: -1px;
-    left: -1px;
-  }
-  25% {
-    top: -3px;
-    left: -2px;
-  }
-  50% {
-    top: 1px;
-    left: 4px;
-  }
-  100% {
-    top: -1px;
-    left: -1px;
-  }
+    0% {
+        top: -1px;
+        left: -1px;
+    }
+    25% {
+        top: -3px;
+        left: -2px;
+    }
+    50% {
+        top: 1px;
+        left: 4px;
+    }
+    100% {
+        top: -1px;
+        left: -1px;
+    }
 }
-
-@media only screen and (max-width : 720px) {
-
-.projects-button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#projects-button {
-  height: 50px;
-  top: 0;
-  right: 0;
-
-}
-
-.project-title {
-  font-size: 1em;
-  line-height: 0;
-}
-
-p {
-  line-height: 1.5;
-}
-
-body.on {
-  overflow-y: hidden;
-}
-aside.on {
-  flex-direction: column;
-  justify-content: space-around;
-  margin: auto;
-  top: 16vh;
-  height: 45vh;
+@media only screen and (max-width: 720px) {
+  .hidden-desktop {
+    display: none;
   }
 
-  section {
-    overflow: hidden;
+  .hidden-mobile {
+    display: block;
   }
-
+    .projects-button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #projects-button {
+        height: 50px;
+        top: 0;
+        right: 0;
+    }
+    .project-title {
+        font-size: 1em;
+        line-height: 0;
+    }
+    p {
+        line-height: 1.5;
+    }
+    body.on {
+        overflow-y: hidden;
+    }
+    aside.on {
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        top: 6vh;
+        height: 103vh;
+    }
+    section {
+        overflow: hidden;
+    }
+    .aside {
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        top: 17vh;
+        height: 58vh;
+    }
+    .sub-title {
+      font-size: 14px;
+      font-style: italic;
+    }
 }
