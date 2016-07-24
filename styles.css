@@ -19,8 +19,17 @@ body {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
 }
+p {
+    font-size: .9em;
+}
+.site-container {
+    top: -7px;
+    right: 8px;
+}
 .hidden-desktop {
+    margin-top: 8em;
     display: block;
+    height: 125px;
 }
 .hidden-mobile {
     display: none;
@@ -33,20 +42,21 @@ body {
 body .on {
     overflow: hidden;
 }
-
 .sub-title {
-  font-size: 14px;
-  font-style: italic;
+    font-size: 14px;
+    font-style: italic;
 }
 #name {
     font-size: 1.2em;
 }
-#projects-button {
-    font-family: 'Source Code Pro', sans-serif;
-    z-index: 100;
-}
 p, a {
     font-family: 'Source Code Pro', sans-serif;
+    /*font-family: "ITC Serif Gothic", Lato;*/
+}
+#projects-button {
+    /*font-family: 'Source Code Pro', sans-serif;*/
+    font-family: 'Lato', sans-serif !important;
+    z-index: 100;
 }
 .project {
     flex: 1;
@@ -76,11 +86,12 @@ aside.on {
     opacity: 1;
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%) scale(1);
+    min-height: 800px;
 }
 a {
     text-decoration: none;
     display: block;
-    line-height: 35px;
+    line-height: 30px;
     color: white;
 }
 section {
@@ -96,10 +107,10 @@ section.on {
     cursor: zoom-out;
     transition: all .3s ease-in-out;
     transform-origin: 50% 0;
-    transform: scale(.8) translateY(83vh);
+    transform: scale(.8) translateY(115vh);
 }
 .contact {
-    position: fixed;
+    position: absolute;
     top: 30vh;
     left: 8vw;
 }
@@ -109,11 +120,11 @@ h2 {
 #projects-button {
     color: white;
     z-index: 100;
-    position: fixed;
+    position: absolute;
     width: 110px;
     height: 50px;
-    top: 40px;
-    right: 100px;
+    top: 20px;
+    right: 0;
     background: none;
     border: none;
     outline: none;
@@ -122,14 +133,14 @@ h2 {
     font-size: 20px;
 }
 .aside {
-    margin-top: 6%;
+    margin-top: 6.7%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 .center {
-  max-width: 70%;
+    margin-top: 6em;
+    max-width: 45%;
 }
 
 /*.glitch_word_box {
@@ -327,36 +338,188 @@ h2 {
         left: -1px;
     }
 }
-@media only screen and (max-width: 720px) {
 
-  .site-container {
-    position: initial;
-  }
+/*Spinning Letters*/
 
-  body .on {
-    overflow: initial;
-  }
-  aside {
-    height: initial;
-    position: absolute;
+.byline span {
+    display: inline-block;
+    animation: spin-letters 10s linear;
+}
+.byline {
+    color: #fff;
+    /*font-family: "ITC Serif Gothic", Lato;*/
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateY(80vh);
+}
+@keyframes spin-letters {
+    0%, 10% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    30% {
+        opacity: 1;
+    }
+    70%, 86%, 100% {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+    /*95%, 100% {
+    opacity: 0;
+  }*/
+}
+@keyframes move-byline {
+    0% {
+        transform: translateZ(5em);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+}
 
-  }
+/* make keyframes that tell the start state and the end state of our object */
 
-  .aside.on {
-    height: initial;
-    top: initial;
-  }
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-  #projects-button {
-    position: absolute;
-  }
-  .hidden-desktop {
-    display: none;
-  }
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
 
-  .hidden-mobile {
-    display: block;
-  }
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+@-webkit-keyframes fadeInSlow { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeInSlow { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeInSlow { from { opacity:0; } to { opacity:1; } }
+
+.fade-in-slow {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeInSlow ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeInSlow ease-in 1;
+	animation:fadeInSlow ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:4s;
+	-moz-animation-duration:4s;
+	animation-duration:4s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+
+.fade-in-slow.three {
+-webkit-animation-delay: 3.6s;
+-moz-animation-delay: 3.6s;
+animation-delay: 3.6s;
+}
+
+/* Make the 3D work on the container */
+
+.site-container {
+    perspective: 800px;
+    transform-style: preserve3d;
+}
+
+/*emoji*/
+
+.emoji {
+    height: 1.5em;
+    width: 1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+.barber {
+    background-image: url(img/barber.png)
+}
+.cash {
+    background-image: url(img/cash.png)
+}
+.drake {
+    background-image: url(img/drake.png)
+}
+.music {
+    background-image: url(img/music.png)
+}
+.party {
+    background-image: url(img/party.png)
+}
+.space {
+    background-image: url(img/space.png)
+}
+.balls {
+    position: absolute !important;
+    left: 35vw;
+    top: 19vh;
+    width: 60vw;
+    height: 400px;
+}
+@media only screen and (max-width: 768px) {
+    .emoji {
+        margin-bottom: 10px;
+    }
+    .byline {
+        display: none;
+    }
+    .glitch_word_box.hover .glitch_word1 {
+        display: none;
+    }
+    .glitch_word_box.hover .glitch_word2 {
+        display: none;
+    }
+    .project {
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        margin-right: -50px;
+    }
+    body .on {
+        overflow: initial;
+    }
+    aside {
+        height: initial;
+        position: absolute;
+    }
+    .aside.on {
+        height: initial;
+        top: initial;
+    }
+    #projects-button {
+        position: absolute;
+    }
+    .hidden-desktop {
+        display: none;
+    }
+    .hidden-mobile {
+        display: block;
+    }
     .projects-button-container {
         display: flex;
         align-items: center;
@@ -364,7 +527,7 @@ h2 {
     }
     #projects-button {
         height: 50px;
-        top: 0;
+        top: 20px;
         right: 0;
     }
     .project-title {
@@ -374,7 +537,6 @@ h2 {
     p {
         line-height: 1.5;
     }
-
     aside.on {
         flex-direction: column;
         justify-content: space-around;
@@ -394,11 +556,20 @@ h2 {
         margin-top: initial;
     }
     .sub-title {
-      font-size: 14px;
-      font-style: italic;
+        font-size: 14px;
+        font-style: italic;
     }
-
+    section {
+        /*opacity: 1;*/
+    }
+    .balls {
+        display: none;
+    }
     section.on {
-      display: none;
+        /*opacity: 0;
+        height: 0;
+        width: 0;*/
+        display: block;
+        transform: scale(.8) translateY(180vh);
     }
 }
